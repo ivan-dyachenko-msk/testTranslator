@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18D109" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="TextEntity" representedClassName=".TextEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="translation" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Translation" inverseName="textEntity" inverseEntity="Translation" syncable="YES"/>
+    </entity>
+    <entity name="Translation" representedClassName="Translation" syncable="YES" codeGenerationType="class">
+        <attribute name="lang" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="version" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="textEntity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TextEntity" inverseName="translation" inverseEntity="TextEntity" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="TextEntity" positionX="-56.1484375" positionY="-33.73046875" width="128" height="73"/>
+        <element name="Translation" positionX="192.73828125" positionY="-48.63671875" width="128" height="88"/>
+    </elements>
+</model>
